@@ -1,125 +1,16 @@
 <!DOCTYPE html>
-<html lang="vi">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Giải Câu Đố 2025 – 1000 Câu Hỏi</title>
-  <style>
-    /* Basic reset */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f7f7f7;
-      color: #333;
-      line-height: 1.6;
-    }
-    header {
-      background-color: #4caf50;
-      color: #fff;
-      padding: 20px 10px;
-      text-align: center;
-    }
-    header h1 {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-    }
-    header p {
-      font-size: 1rem;
-    }
-    main {
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 0 10px;
-    }
-    .puzzle {
-      background-color: #fff;
-      border-radius: 5px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      margin-bottom: 10px;
-      padding: 15px;
-      transition: background-color 0.3s ease;
-      cursor: pointer;
-    }
-    .puzzle:hover {
-      background-color: #f0f0f0;
-    }
-    .puzzle .question {
-      font-weight: bold;
-      margin-bottom: 5px;
-    }
-    .puzzle .answer {
-      display: none;
-      color: #4caf50;
-    }
-    .puzzle.open .answer {
-      display: block;
-    }
-    .footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
-      color: #777;
-    }
-    .search-box {
-      margin-bottom: 20px;
-      display: flex;
-    }
-    .search-box input {
-      flex: 1;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 1rem;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Giải Câu Đố 2025</h1>
-    <p>Thử thách trí tuệ với 1.000 câu đố toán học!</p>
-  </header>
-  <main>
-    <div class="search-box">
-      <input type="text" id="search" placeholder="Tìm kiếm câu đố..." oninput="filterPuzzles()" />
-    </div>
-    <div id="puzzle-container"></div>
-  </main>
-  <div class="footer">
-    &copy; 2025 Giải Câu Đố. Mọi quyền được bảo lưu.
-  </div>
-  <script src="puzzles.js"></script>
-  <script>
-    const container = document.getElementById('puzzle-container');
-    // Render all puzzles on page load
-    function renderPuzzles(list) {
-      container.innerHTML = '';
-      list.forEach(puzzle => {
-        const div = document.createElement('div');
-        div.className = 'puzzle';
-        const q = document.createElement('div');
-        q.className = 'question';
-        q.textContent = puzzle.question;
-        const a = document.createElement('div');
-        a.className = 'answer';
-        a.textContent = 'Đáp án: ' + puzzle.answer;
-        div.appendChild(q);
-        div.appendChild(a);
-        div.addEventListener('click', () => {
-          div.classList.toggle('open');
-        });
-        container.appendChild(div);
-      });
-    }
-    // Filter puzzles based on search input
-    function filterPuzzles() {
-      const term = document.getElementById('search').value.toLowerCase();
-      const filtered = puzzles.filter(p => p.question.toLowerCase().includes(term));
-      renderPuzzles(filtered);
-    }
-    // Expose functions globally
-    window.filterPuzzles = filterPuzzles;
-    // Initial rendering
-    renderPuzzles(puzzles);
-  </script>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fira+Code:wght@300..700&family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Oxanium:wght@200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <!-- This is a replit script which adds a banner on the top of the page when opened in development mode outside the replit environment -->
+    <script type="text/javascript" src="https://replit.com/public/js/replit-dev-banner.js"></script>
+  </body>
 </html>
